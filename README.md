@@ -10,17 +10,16 @@ blockly is a ROS package that provides web-based visualization and block program
 #### Frontend
 ```
 cd <catkin_ws_root>/src
-git clone https://github.com/erlerobot/ros_blockly
+git clone https://github.com/lucasw/ros_blockly
 cd ros_blockly/frontend
-git clone https://github.com/erlerobot/blockly
+git clone https://github.com/lucasw/blockly
 git clone https://github.com/erlerobot/ace-builds
 cd ../scripts
 
 # install apache
 sudo apt-get install apache2
 # make sure that Apache is running properly in your robot and then
-./deploy.sh
-
+sudo ln -s <caktin_ws_root>/src/ros_blockly/frontend/ /var/www/ros_blockly
 ```
 
 #### Backend
@@ -29,11 +28,12 @@ sudo apt-get install apache2
 sudo pip3 install rosdep rosinstall_generator wstool rosinstall
 sudo pip3 install autobahn
 cd <catkin_ws_root>
-catkin_make_isolated --pkg blockly --install
-source install_isolated/setup.bash
+catkin_make #_isolated --pkg blockly --install
+#source install_isolated/setup.bash
+roscore
 rosrun blockly blockly_backend.py
 
-# now go to http://erle-brain-2.local/
+# now go to http://localhost/ros_blockly
 #  and start playing!
 
 ```
