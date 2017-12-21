@@ -1,0 +1,6 @@
+[submodule "frontend/blockly"]
+	path = frontend/blockly
+	url = http://github.com/eborghi10/blockly
+[submodule "frontend/ace-builds"]
+	path = frontend/ace-builds
+	url = http://github.com/eborghi10/ace-builds
