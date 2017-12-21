@@ -115,7 +115,7 @@ def talker():
         # Trollius >= 0.3 was renamed
         import trollius as asyncio
 
-    factory = WebSocketServerFactory(u"ws://0.0.0.0:9000", debug=False)
+    factory = WebSocketServerFactory(u"ws://0.0.0.0:9000")
     factory.protocol = BlocklyServerProtocol
 
     loop = asyncio.get_event_loop()
