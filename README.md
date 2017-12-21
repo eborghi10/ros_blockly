@@ -29,10 +29,8 @@ roscd
 cd ../src
 catkin_make --only-pkg-with-deps blockly
 source devel/setup.bash
-# Open in a terminal window
-roscore
-# In another window [THIS PAGE IS BLOCKING CTRL-C]
-rosrun blockly blockly_backend.py
+# Execute the ROS node
+roslaunch blockly ros_blockly.launch
 # now, open:
 catkin_ws/src/ros_blockly/frontend/index.html
 # and start playing!

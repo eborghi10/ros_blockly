@@ -1,0 +1,3 @@
+<launch>
+	<node name="blockly_backend" pkg="blockly" type="blockly_backend.py" output="screen" />
+</launch>
