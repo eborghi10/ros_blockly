@@ -39,7 +39,7 @@ catkin_ws/src/ros_blockly/frontend/index.html
 ```
 
 ### Create your own blocks
-- Open `frontend/demos/blockfactory/index.html`
+- Open `frontend/blockly/demos/blockfactory/index.html`
 - Design you own block and then add the metadata to: `frontend/blockly/blocks` and `frontend/blockly/generator`
 - Launch `python build.py` to regenerate the blocks.
 
