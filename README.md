@@ -25,7 +25,7 @@ sudo ln -s ~/caktin_ws/src/ros_blockly/frontend/ /var/www/ros_blockly
 #### Backend
 ```
 roscd
-cd ../src
+cd ../
 catkin_make --only-pkg-with-deps blockly
 source devel/setup.bash
 # Execute the ROS node
