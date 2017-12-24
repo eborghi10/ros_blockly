@@ -19,7 +19,6 @@ sudo pip3 install autobahn
 roscd
 cd ../src
 git clone --recursive https://github.com/eborghi10/ros_blockly
-cd ../scripts
 sudo ln -s ~/caktin_ws/src/ros_blockly/frontend/ /var/www/ros_blockly
 ```
 
