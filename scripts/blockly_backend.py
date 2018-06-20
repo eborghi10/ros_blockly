@@ -60,8 +60,8 @@ class BlocklyServerProtocol(WebSocketServerProtocol):
         # pub.publish("blockly says: "+payload.decode('utf8'))
 
         self.build_ros_node(payload.decode('utf8'))
-        print('The file generated contains...')        
-        os.system('cat test.py')
+        # print('The file generated contains...')        
+        # os.system('cat test.py')
 
         os.system("python3 test.py")
 

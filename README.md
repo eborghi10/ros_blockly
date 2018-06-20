@@ -12,6 +12,7 @@ sudo apt-get install apache2
 # Install dependencies
 sudo pip3 install rosdep rosinstall_generator wstool rosinstall
 sudo pip3 install autobahn
+sudo apt-get install python3-defusedxml
 ```
 
 #### Frontend
@@ -37,7 +38,7 @@ catkin_ws/src/ros_blockly/frontend/index.html
 
 ### Create your own blocks
 - Open `frontend/blockly/demos/blockfactory/index.html`
-- Design you own block and then add the metadata to: `frontend/blockly/blocks` and `frontend/blockly/generator`
+- Design you own block and then add the metadata to: `frontend/blockly/blocks` and `frontend/blockly/generators/python`
 - Launch `python build.py` to regenerate the blocks.
 
 ### License
@@ -49,4 +50,5 @@ Unless specified, the rest of the code is freed under a GPLv3 License.
 - [Erle Robotics blockly docs](http://erlerobotics.com/docs/ROS/blockly/Intro.html)
 - [ROS Wiki](http://wiki.ros.org/blockly)
 
-Do you need help getting your robot supported? Launch your questions at http://forum.erlerobotics.com.
+
+![Cover photo](img/cover.jpg)

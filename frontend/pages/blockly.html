@@ -4,11 +4,10 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="http://erlerobotics.com/blog/wp-content/uploads/2015/04/favicon.png" rel="shortcut icon" type="image/x-icon">
 
     <title>ros_blockly, program your ROS robots in a simple way</title>
 
@@ -23,13 +22,6 @@
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     
     <!-- Include Blocky -->
     <script src="../blockly/blockly_compressed.js"></script>
@@ -43,7 +35,6 @@
     <script src="../ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Ubuntu fonts -->
-    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/ubuntu.css">
     <style>body { font-family: Ubuntu, sans-serif; }</style>
 
@@ -67,83 +58,11 @@
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-
-                    <ul style="padding-top:10px;">
-                      <img style="width:30px;" src="http://erlerobotics.com/blog/wp-content/uploads/2015/04/erlerobotics-logo.png"/>
-                      <a href="http://erlerobotics.com">Erle Robotics</a>
-                    </ul>
-
-                    
-<!--                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
- -->
-
-
-<!--                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
- -->                    
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        
-<!--                         <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </li> -->
-                        
-                       <!--  <li>
-                            <a href="blockly.html"><i class="active fa fa-cubes fa-fw"></i> Blockly</a>
-                        </li> -->
-
                         <li>
-                            <a href="#"><i class="fa fa-cubes fa-fw"></i> Builder<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#" onclick='sendText();'>Launch</a>
-                                </li>
-<!--                                 <li>
-                                    <a href="#" onclick="localstorage();">Save</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="">Saved projects<span class="fa arrow"></span></a>
-
-                                    <ul class="nav nav-third-level">
-                                      <li><a href="#">Test1</a></li>
-                                      <li><a href="#">Test2</a></li>                      
-                                    </ul>  
-                                </li>
- --><!--                                 <li>
-                                    <a href="#" onclick="tojavascript()">Javascript</a>
-                                </li>
- -->
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-
-                        <li>
-                            <a href="graph.html"><i class="fa fa-sitemap fa-fw"></i> Graph</a>
+                            <a href="#" onclick='sendText();'>Launch</a>
                         </li>
                     </ul>
                 </div>
@@ -176,23 +95,10 @@
                           return x;
                       }
                       </div>
-<!--                       
-                      <script>
-                          var editor = ace.edit("editor");
-                          editor.setTheme("ace/theme/monokai");
-                          editor.getSession().setMode("ace/mode/javascript");
-                      </script>
- -->                      
 
-<!--                   <textarea id="profile_text" style="width:100%; height:100px;">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </textarea> -->
                   </div>
               </div>
           </div>
-          <!-- <div id="blocklyArea" style="height:100vh;"></div> -->
         </div>
         <!-- /#page-wrapper -->
     </div>
@@ -405,7 +311,6 @@
   blocklyDiv.style.top = y + 'px';
   blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
   blocklyDiv.style.height = blocklyArea.offsetHeight  + 'px';
-  // blocklyDiv.style.height = blocklyArea.offsetHeight - 51 - 42 + 171 + 'px';
   };
   window.addEventListener('resize', onresize, false);
   onresize();
@@ -416,7 +321,6 @@
       Blockly.JavaScript.addReservedWords('code');
       var code = Blockly.JavaScript.workspaceToCode(workspace);
       try {
-        //eval(code);
         alert(code);
       } catch (e) {
         alert(e);
@@ -427,7 +331,6 @@
       Blockly.JavaScript.addReservedWords('code');
       var code = Blockly.PHP.workspaceToCode(workspace);
       try {
-        //eval(code);
         alert(code);
       } catch (e) {
         alert(e);
@@ -438,7 +341,6 @@
       Blockly.Python.addReservedWords('code');
       var code = Blockly.Python.workspaceToCode(workspace);
       try {
-        //eval(code);
         alert(code);
       } catch (e) {
         alert(e);
@@ -448,15 +350,12 @@
   // hide blockly and show the code
   function hide_blockly() {
       document.getElementById("blocklyDiv").style.display = 'none';
-      document.getElementById("blocklyArea").style.display = 'none';
-      // onresize();        
+      document.getElementById("blocklyArea").style.display = 'none';     
       window.dispatchEvent(new Event('resize'));
 
       // show the code
       Blockly.Python.addReservedWords('code');
-      var code = Blockly.Python.workspaceToCode(workspace);      
-      // // the old way of placing the code, this required a textarea
-      // document.getElementById("editor").innerHTML = code;
+      var code = Blockly.Python.workspaceToCode(workspace);
 
       var editor = ace.edit("editor");
       editor.setTheme("ace/theme/monokai");
@@ -470,8 +369,6 @@
       document.getElementById("blocklyDiv").style.display = 'block';
       document.getElementById("blocklyArea").style.display = 'block';
       window.location.reload(true);
-      // alert("resizing");
-      // window.dispatchEvent(new Event('resize'));
   };
 </script>  
 
@@ -490,17 +387,12 @@
       automate_localstorage();
     }
     catch(err) {
-        // alert(err);
         console.log(err);
-        // console.log("This is generally because there's no tree information");
         automate_localstorage();
     }
 
     // Launch websockets
     launchwebsockets();
-
-    // Recursively store everything after x miliseconds
-    // automate_localstorage();
   }
 
   function automate_localstorage(){
@@ -513,11 +405,7 @@
     var xml = Blockly.Xml.workspaceToDom(workspace);
     var xml_text = Blockly.Xml.domToText(xml);
     localStorage.setItem("blocks_cache", xml_text);
-    // console.log("Saved: "+xml_text);
-    // console.log("-------------");
     var xml_text_stored = localStorage.getItem("blocks_cache");
-    // console.log("Rtved: "+xml_text_stored)
-    // alert("Saved: "+xml_text);
   }
 
   var socket = null;
@@ -526,10 +414,6 @@
   // window.onload = function() {
   function launchwebsockets() {
     socket = new WebSocket("ws://0.0.0.0:9000");
-    // socket = new WebSocket("ws://127.0.0.1:9000");
-    // socket = new WebSocket("ws://10.0.0.1:9000");
-    // socket = new WebSocket("ws:/erle-brain-2.local:9000");
-    // socket = new WebSocket("ws://192.168.1.57:9000");
     socket.binaryType = "arraybuffer";
 
     socket.onopen = function() {
@@ -559,24 +443,11 @@
 
   function sendText() {
     if (isopen) {
-       
+    
       Blockly.Python.addReservedWords('code');
       var code = Blockly.Python.workspaceToCode(workspace);
-      // socket.send("Hello, world!");
       socket.send(code);
       console.log("Text message sent.");               
-    } else {
-       console.log("Connection not opened.")
-    }
-  };
-
-  function sendBinary() {
-    if (isopen) {
-       var buf = new ArrayBuffer(32);
-       var arr = new Uint8Array(buf);
-       for (i = 0; i < arr.length; ++i) arr[i] = i;
-       socket.send(buf);
-       console.log("Binary message sent.");
     } else {
        console.log("Connection not opened.")
     }
