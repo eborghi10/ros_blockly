@@ -26,9 +26,7 @@
     <!-- Include Blocky -->
     <script src="../blockly/blockly_compressed.js"></script>
     <script src="../blockly/blocks_compressed.js"></script>
-    <script src="../blockly/javascript_compressed.js"></script>
     <script src="../blockly/python_compressed.js"></script>
-    <script src="../blockly/php_compressed.js"></script>
     <script src="../blockly/msg/js/en.js"></script>
 
     <!-- Ace editor -->
@@ -321,26 +319,6 @@
 </script>
 
 <script>
-  function tojavascript(){
-      Blockly.JavaScript.addReservedWords('code');
-      var code = Blockly.JavaScript.workspaceToCode(workspace);
-      try {
-        alert(code);
-      } catch (e) {
-        alert(e);
-      }
-  };
-
-  function tophp(){
-      Blockly.JavaScript.addReservedWords('code');
-      var code = Blockly.PHP.workspaceToCode(workspace);
-      try {
-        alert(code);
-      } catch (e) {
-        alert(e);
-      }
-  };
-
   function topython(){
       Blockly.Python.addReservedWords('code');
       var code = Blockly.Python.workspaceToCode(workspace);
